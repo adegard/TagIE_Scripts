@@ -14,4 +14,7 @@ Use with <a href="https://github.com/adegard/TagIE.ahk/">TagIE_Editor</a>
 <li><b>Simple_web_scrap_TagIE.ack</b>: Simple web scraping example on TagIE</li>
 <li><b>chrome_text_click_example_TagIE.ahk</b>: On Chrome: Find text on page and wait ... until it appears and click! (TagIE)</li>
 <li><b>facebook_multi_group_sharer_tagIE.ahk</b>: Share in multiple Facebook groups - TagIE example</li>
+<li><b>kijiji_joboffer_autoresponder_TagIE.ahk</b>: Autorisponder to ads or posts on Kijiji with TagIE</li>
+<li><b>youtube_auto_comment.ahk</b>: Make Youtube Comments on each Video of a query [TagIE]</li>
+<li><b>facebook_liker_tagie.ack</b>: Facebook Liker clicking on TagIE</li>
 </ul>  
