@@ -13,7 +13,7 @@ loop, 3  ;how many items
 selector = body > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(%A_Index%) > div > h3 > a
 
 tclick(selector)
-var:=tread("body > main > section:nth-of-type(1) > div:nth-of-type(1) > h1")
+var:=tread("body > main > section:nth-of-type(1) > div:nth-of-type(1) > h1", 0)
  
 techo(var)
 
