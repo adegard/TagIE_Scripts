@@ -1,7 +1,7 @@
 #include TagIE.ahk  
 url := "https://finance.yahoo.com/quote/%5EDJI/history?p=%5EDJI"
 tnav(url,"")
-tscroll("table")
+tscroll("table", 0)
 table2csv("DOW.csv")
 
 
