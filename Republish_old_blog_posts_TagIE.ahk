@@ -30,7 +30,7 @@ Random, num, 3, Max
 
 selector =#Blog1 > div.blog-posts.hfeed > div:nth-child(%num%) > div > div > div > h3 > a
 
-tclick(selector)
+tclick(selector, 0)
 
 Sleep, 3000
 
