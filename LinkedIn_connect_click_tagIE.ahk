@@ -1,46 +1,23 @@
-;Grow your Linkedin Network:launch Chrome webpage and Click on "connect"
-;your linkeddin password must be saved in browser
-;schedule this task one by day with the scheduler of Tagie to grow your network!
 #include TagIE.ahk 
-
-;also running Chrome is easy.
-;ChromeClick function use Findclick to search yellow color of term search (Ctrl F)
-;https://autohotkey.com/board/topic/89592-findclick-2nd-edition/
-
-
-Run, chrome.exe https://www.linkedin.com/mynetwork/, , Max
-
-#IfWinActive ahk_class Chrome_WidgetWin_1 ; example hotkey
-WinWaitActive, LinkedIn
-StatusBarWait, Done, , , LinkedIn
-
-Sleep, 3000
-
+frame := 0 
+ 
+tnav("https://www.linkedin.com/mynetwork/", "")
 TMI := 1000
 
-Loop, 3	;number of iterations
-{
-	ChromeClick("Accetta")  ; replace by Accept in english
-	Sleep, TMI*2
-}
-
-	
 Loop, 5	;number of iterations
 {
 	Loop, 5	;number of iterations
 	{
-		ChromeClick("Collegati")  ; replace by Connect in english
-		Sleep, TMI*3
+twaitSelector("HTML>BODY>DIV:nth-of-type(5)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV>SECTION>UL>LI>DIV>SECTION>FOOTER>BUTTON>SPAN", frame)
+
+
+tclick("HTML>BODY>DIV:nth-of-type(5)>DIV:nth-of-type(5)>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV>DIV>DIV>DIV>SECTION>UL>LI>DIV>SECTION>FOOTER>BUTTON>SPAN", frame)
+
+		Sleep, TMI*2
 	}
 send, {F5}  ; reload page
-Sleep, TMI*6
+Sleep, TMI*3
 }
-
-;close chrome browser:
-SetTitleMatchMode 2
-WinClose Google Chrome
-
-
-ExitApp
-
-Esc:: ExitApp
+pwb.Quit()
+ExitApp 
+Esc::ExitApp
