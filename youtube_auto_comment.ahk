@@ -11,7 +11,7 @@ sleep, 3000
 
 selector = body > div:nth-of-type(2) > div:nth-of-type(4) > div > div:nth-of-type(5) > div > div > div > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(1) > ol > li:nth-of-type(2) > ol > li:nth-of-type(%A_Index%) > div > div > div:nth-of-type(2) > h3 > a
 
-tclick(selector)
+tclick(selector, 0)
 
 Sleep, 5000 
 
@@ -23,13 +23,13 @@ Sleep, 200
 
 Sleep, 4000 ;wait comments to load 
 
-tclick("comment-simplebox-renderer-collapsed-content")
+tclick("comment-simplebox-renderer-collapsed-content", 0)
 Sleep, 100
 
 SendInput {Raw} %msg%
 Sleep, 1000
 
-tclick("yt-uix-button yt-uix-button-size-default yt-uix-button-primary yt-uix-button-empty comment-simplebox-submit yt-uix-sessionlink")
+tclick("yt-uix-button yt-uix-button-size-default yt-uix-button-primary yt-uix-button-empty comment-simplebox-submit yt-uix-sessionlink", 0)
 Sleep, 100
 
 sleep, 3000
