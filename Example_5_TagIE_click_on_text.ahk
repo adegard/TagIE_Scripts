@@ -8,7 +8,9 @@ tnav("https://www.autohotkey.com/","")
  
 tclick("Download", 0)
 
-tclick("Download AutoHotkey Installer", 0)
+;Wait for Selector, frame number (0:disabled) 
+twaitSelector("body > p:nth-of-type(2) > a", 0)
+tclick("body > p:nth-of-type(2) > a", 0)
 
 Sleep, 5000
 pwb.Quit()
