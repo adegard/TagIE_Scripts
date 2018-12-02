@@ -18,11 +18,11 @@ Loop % array.Length()
 
 tnav(url,"")
  
-tenter(text, "body > div:nth-of-type(1) > div > form > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div > textarea")
+tenter(text, "body > div:nth-of-type(1) > div > form > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div > textarea", 0)
 
-tclick("body > div:nth-of-type(1) > div > form > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div > div > a > span:nth-of-type(2) > i")
+tclick("body > div:nth-of-type(1) > div > form > div:nth-of-type(1) > div:nth-of-type(2) > div > div > div > div > a > span:nth-of-type(2) > i", 0)
  
-tclick("Share in a group")
+tclick("Share in a group", 0)
 
 value := array[A_Index]
 Sleep, 1000
@@ -34,7 +34,7 @@ SendInput {Down}{enter}
 Sleep, 1000  
 
 ;Post to FB button
-tclick("body > div:nth-of-type(1) > div > form > div:nth-of-type(3) > div > table > tbody > tr > td:nth-of-type(2) > button:nth-of-type(2) > span")
+tclick("body > div:nth-of-type(1) > div > form > div:nth-of-type(3) > div > table > tbody > tr > td:nth-of-type(2) > button:nth-of-type(2) > span", 0)
 
 Sleep, 2000
  
