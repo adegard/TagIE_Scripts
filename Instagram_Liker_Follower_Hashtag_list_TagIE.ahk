@@ -43,7 +43,7 @@
 
 	selector =#react-root > section > main > article > div.EZdmt > div > div > div:nth-child(2) > div:nth-child(%A_Index%) > a > div > div._9AhH0
 
-	tclick(selector)
+	tclick(selector, 0)
 
             Random, Time_To_Wait, low, high
 	Time := Time_To_Wait * 500
@@ -52,7 +52,7 @@
 
 
 	;heart clicking
-	tclick("glyphsSpriteHeart__outline__24__grey_9 u-__7")
+	tclick("glyphsSpriteHeart__outline__24__grey_9 u-__7", 0)
 
             Random, Time_To_Wait, low, high
 	Time := Time_To_Wait * 500
@@ -60,10 +60,10 @@
                Sleep, Time
 	
 	;click on Follow
-	tclick("oW_lN _0mzm- sqdOP yWX7d       ")
+	tclick("oW_lN _0mzm- sqdOP yWX7d       ", 0)
 	
 	;cancel action to avoid unfollow
-	tclick("aOOlW   HoLwm ")
+	tclick("aOOlW   HoLwm ", 0)
 
             Random, Time_To_Wait, low, high
 	Time := Time_To_Wait * 500
@@ -71,7 +71,7 @@
                Sleep, Time
 
 	;close post
-	tclick("ckWGn")
+	tclick("ckWGn", 0)
 
         }
 
