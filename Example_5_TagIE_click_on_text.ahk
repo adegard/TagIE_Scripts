@@ -6,9 +6,9 @@
  
 tnav("https://www.autohotkey.com/","")
  
-tclick("Download")
+tclick("Download", 0)
 
-tclick("Download AutoHotkey Installer")
+tclick("Download AutoHotkey Installer", 0)
 
 Sleep, 5000
 pwb.Quit()
