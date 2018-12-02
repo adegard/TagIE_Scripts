@@ -14,12 +14,10 @@ SendInput, {WheelDown}
 sleep, 1000
 }
 
-;FindClick("fblike.png")
-
-;alternative
 selector =body > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(5) > div > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div > div > div > div:nth-of-type(%A_Index%) > div > div > div:nth-of-type(3) > div:nth-of-type(2) > form > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div > div > span:nth-of-type(1) > div > a
 
-tclick(selector)
+tclick(selector, 0)
 } 
 
+pwb.Quit()
 ExitApp 
