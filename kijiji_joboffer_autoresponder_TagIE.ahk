@@ -42,27 +42,27 @@ myurl:=pwb.document.getElementsByClassName("cta").item[A_Index].getAttribute("hr
 
 selector = body > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(%A_Index%) > div > h3 > a
 
-tclick(selector)
+tclick(selector, 0)
 
 	Sleep, 1000
 		
 		
 	;insert data
-tscroll("name") 
+tscroll("name", 0) 
 Sleep, 1000
-tenter(Array[1], "name")
+tenter(Array[1], "name", 0)
 Sleep, 1000
-tenter(Array[2], "email")
+tenter(Array[2], "email", 0)
 Sleep, 1000
-tenter(Array[3], "message")
+tenter(Array[3], "message", 0)
 Sleep, 1000
 	
 		
-tclick("body > main > section:nth-of-type(1) > div:nth-of-type(2) > aside > article:nth-of-type(3) > article > div > form > label:nth-of-type(1) > div")
-tclick("body > main > section:nth-of-type(1) > div:nth-of-type(2) > aside > article:nth-of-type(3) > article > div > form > label:nth-of-type(2) > div")
+tclick("body > main > section:nth-of-type(1) > div:nth-of-type(2) > aside > article:nth-of-type(3) > article > div > form > label:nth-of-type(1) > div", 0)
+tclick("body > main > section:nth-of-type(1) > div:nth-of-type(2) > aside > article:nth-of-type(3) > article > div > form > label:nth-of-type(2) > div", 0)
 
 ;SUBMIT DISABLED		
-;tclick("body > main > section:nth-of-type(1) > div:nth-of-type(2) > aside > article:nth-of-type(3) > article > div > form > footer > input")
+;tclick("body > main > section:nth-of-type(1) > div:nth-of-type(2) > aside > article:nth-of-type(3) > article > div > form > footer > input", 0)
 
 		Sleep, 3000
 
