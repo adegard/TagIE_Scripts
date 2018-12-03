@@ -2,7 +2,8 @@
 TagIE Browser Automation Examples and Strategies
 Use with <a href="https://github.com/adegard/TagIE.ahk/">TagIE_Editor</a>
 
-
+To save a file:
+MAKE RIGHT MOUSE CLICK > "SAVE LINK TO FILE..."
 <ul>
 <li><b>Republish_old_blog_posts_TagIE.ahk</b>: Re-publish old Blog Posts Randomly on FacebookGroups and Linked ! [TagIE]</li>
 <li><b>LinkedIn_connect_click_tagIE.ahk</b>: Grow your Linkedin Network (TagIE)</li>
