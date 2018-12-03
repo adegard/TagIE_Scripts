@@ -10,7 +10,7 @@ Use with <a href="https://github.com/adegard/TagIE.ahk/">TagIE_Editor</a>
 <li><b>export_dow_table_csv_tagIE.ahk</b>: Export a Table to CSV with TagIE</li>
 <li><b>Example_5_TagIE_click_on_text.ahk</b>: Click on text in IE: make easy navigation! Click on any text of links or Button in IE pages - TagIE</li>
 <li><b>parser_RSS: Extract RSS Feed.ahk</b>: Example of Parsing Html or Xml with TagIE</li>
-<li><b>Example_4.ahk</b>: clicks on items one by one from result page (TagIE)</li>
+<li><b><a href="https://raw.githubusercontent.com/adegard/TagIE_Scripts/master/Example_4.ahk">Example_4.ahk</a></b>: clicks on items one by one from result page (TagIE)</li>
 <li><b>Simple_web_scrap_TagIE.ack</b>: Simple web scraping example on TagIE</li>
 <li><b>chrome_text_click_example_TagIE.ahk</b>: On Chrome: Find text on page and wait ... until it appears and click! (TagIE)</li>
 <li><b>facebook_multi_group_sharer_tagIE.ahk</b>: Share in multiple Facebook groups - TagIE example</li>
