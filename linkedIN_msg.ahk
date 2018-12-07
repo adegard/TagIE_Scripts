@@ -34,6 +34,13 @@ tnav("https://www.linkedin.com/search/results/people/?facetGeoRegion=%5B%22it%3A
 loop, 10  ;how many pages
 {
 
+if A_Index !=1
+{
+myurl:= "https://www.linkedin.com/search/results/people/?facetGeoRegion=%5B%22it%3A0%22%5D&facetNetwork=%5B%22F%22%2C%22S%22%5D&origin=FACETED_SEARCH&page="A_Index
+
+tnav(myurl,"")
+}
+
 loop, 10  ;how many items per page
 {
 
@@ -120,11 +127,6 @@ pwb.document.parentWindow.history.go(-1) ;Go Backward one page
 
 techo("NEXT PAGE")
 
-;Wait for Selector, frame number (0:disabled) 
-twaitSelector("body > div:nth-of-type(5) > div:nth-of-type(5) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div > div > div > div > div:nth-of-type(1) > ol > li:nth-of-type(2) > button > div", 0)
-
-;click on element, frame number(0:disabled) 
-tclick("body > div:nth-of-type(5) > div:nth-of-type(5) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div > div > div > div > div:nth-of-type(1) > ol > li:nth-of-type(2) > button > div", 0)
 
 } 		;end loop pages
 
