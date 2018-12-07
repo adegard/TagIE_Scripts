@@ -5,8 +5,8 @@ Use with <a href="https://github.com/adegard/TagIE.ahk/">TagIE_Editor</a>
 To save a file:
 MAKE RIGHT MOUSE CLICK > "SAVE LINK AS..."
 <ul>
-<li><b><a href="https://raw.githubusercontent.com/adegard/TagIE_Scripts/master/Republish_old_blog_posts_TagIE.ahk">Republish_old_blog_posts_TagIE.ahk</a></b>: Re-publish old Blog Posts Randomly on FacebookGroups and Linked ! [TagIE]</li>
-<li><b><a href="https://raw.githubusercontent.com/adegard/TagIE_Scripts/master/linkedIN_msg.ahk">linkedIN_msg.ahk</a></b>: Send Messages to a filtered list of LinkedIn contacts! (TagIE)</li>
+<li><b><a href="https://raw.githubusercontent.com/adegard/TagIE_Scripts/master/Republish_old_blog_posts_TagIE.ahk">Republish_old_blog_posts_TagIE.ahk</a></b>: Re-publish old Blog Posts Randomly on FacebookGroups and Linkedin ! [TagIE]</li>
+<li><b><a href="https://raw.githubusercontent.com/adegard/TagIE_Scripts/master/linkedIN_msg.ahk">linkedIN_msg.ahk</a></b>: Send Messages to a filtered list of LinkedIn contacts! (Put fiel message in same directory: ie msg_natale.txt)</li>
 <li><b><a href="https://raw.githubusercontent.com/adegard/TagIE_Scripts/master/LinkedIn_connect_click_tagIE.ahk">LinkedIn_connect_click_tagIE.ahk</a></b>: Grow your Linkedin Network (TagIE)</li>
 <li><b><a href="https://raw.githubusercontent.com/adegard/TagIE_Scripts/master/Instagram_Liker_Follower_Hashtag_list_TagIE.ahk">Instagram_Liker_Follower_Hashtag_list_TagIE.ahk</a></b>: Instagram Liker and Follower for Hashtag list [TagIE]</li>
 <li><b><a href="https://raw.githubusercontent.com/adegard/TagIE_Scripts/master/Example_5_TagIE_click_on_text.ahk">Example_5_TagIE_click_on_text.ahk</a></b>: Click on text in IE: make easy navigation! Click on any text of links or Button in IE pages - TagIE</li>
