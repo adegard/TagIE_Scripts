@@ -1,11 +1,13 @@
+SetWorkingDir %A_ScriptDir%
 #include TagIE.ahk
 
 ;parameters
-dbFileName=C:\Users\degar\Google Drive\Web Marketing\script\growth hacking\LinkedIn_names_natale.txt
+dbFileName=LinkedIn_names_natale.txt
 
-msgFile=C:\Users\degar\Google Drive\Web Marketing\script\growth hacking\msg_natale.txt
+msgFile=msg_natale.txt
 
-  
+techo(dbFileName)
+
 clipboard = ; Empty the clipboard
 FileRead, Clipboard, %msgFile%
 
@@ -16,7 +18,7 @@ if ErrorLevel
     MsgBox, The attempt to copy text onto the clipboard failed.
     return
 }
-techo(message)
+techo(Clipboard)
 
 
 ;check if Database fie exist, if not, create it
@@ -30,37 +32,43 @@ frame := 0
  
 tnav("https://www.linkedin.com/search/results/people/?facetGeoRegion=%5B%22it%3A0%22%5D&facetNetwork=%5B%22F%22%2C%22S%22%5D&origin=FACETED_SEARCH", "")
 
+p:=4 ;initial page
 
-loop, 10  ;how many pages
+
+if p!=1
 {
 
-if A_Index !=1
-{
-myurl:= "https://www.linkedin.com/search/results/people/?facetGeoRegion=%5B%22it%3A0%22%5D&facetNetwork=%5B%22F%22%2C%22S%22%5D&origin=FACETED_SEARCH&page="A_Index
+tnav("https://www.linkedin.com/search/results/people/?facetGeoRegion=%5B%22it%3A0%22%5D&facetNetwork=%5B%22F%22%2C%22S%22%5D&origin=FACETED_SEARCH%3Fpage&page="p, "")
 
-tnav(myurl,"")
 }
+
+
+while p < 10  ;how many pages
+{
+
 
 loop, 10  ;how many items per page
 {
+/*
+
+myurl:=pwb.document.getElementsByClassName("name actor-name").item[A_Index].getAttribute("href") ;gets the value of an attribute
+
+name:=pwb.document.getElementsByClassName("name actor-name").item[A_Index].InnerText 
+*/
 
 Selector=body > div:nth-of-type(5) > div:nth-of-type(5) > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div > div > div > div > div > div > ul > li:nth-of-type(%A_Index%) > div > div > div:nth-of-type(2) > a > h3 > span > span > span:nth-of-type(1)
 
+twaitSelector(Selector, frame)
 
-;scroll to element, in frame (0:disabled)
 tscroll(Selector, frame)
 
-;Select value, in frame (0:disabled)
-tselect("ele", "value", 0)
-
 techo("SCRAP NAME avoid double messages")
-
-twaitSelector(Selector, frame)
 
 ;Get element value, in frame (0:disabled)
 name:=tread(Selector, 0)
 
 techo(name)
+;techo(myurl)
 
 	FileRead, OutputVar, %dbFileName%
 	
@@ -77,10 +85,10 @@ techo(name)
 
 techo("GO TO PROFILE PAGE")
 
-;scroll to element,
-tscroll(Selector,  frame)
 
+;tnav(myurl,"")
 tclick(Selector, frame)
+
 
 techo("CLICK ON MESSAGE")
 
@@ -115,9 +123,14 @@ Sleep, 1000
 techo("CLICK CLOSE BUTTON") 
 tclick("body > div:nth-of-type(5) > div:nth-of-type(5) > aside > div:nth-of-type(2) > header > section:nth-of-type(2) > button:nth-of-type(2)", 0)
 
-Sleep, 1000
+Sleep, 2000
 
 techo("GO BACK")
+
+    WinActivate ahk_class IEFrame
+    ControlFocus, Internet Explorer_Server1, ahk_class IEFrame
+    pwb := PWB_Init(WinTitle) ; replaces WinGetTitle and PWB_Get()
+
 pwb.document.parentWindow.history.go(-1) ;Go Backward one page
 
 	} 	 ;end if
@@ -126,6 +139,9 @@ pwb.document.parentWindow.history.go(-1) ;Go Backward one page
 } 		;end loop items per page
 
 techo("NEXT PAGE")
+tclick(".next", 0)
+
+p:=p+1
 
 
 } 		;end loop pages
