@@ -110,10 +110,10 @@ tclick("body > div:nth-of-type(5) > div:nth-of-type(5) > aside > div:nth-of-type
 
 Sleep, 1000
 
-
-	} 	 ;end if
 techo("GO BACK")
 pwb.document.parentWindow.history.go(-1) ;Go Backward one page
+
+	} 	 ;end if
 
 
 } 		;end loop items per page
