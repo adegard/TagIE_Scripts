@@ -30,13 +30,13 @@ ifnotexist,%dbFileName%
 
 frame := 0 
  
-p:=7 ;initial page
+p:=8 ;initial page
 
 tnav("https://www.linkedin.com/search/results/people/?facetGeoRegion=%5B%22it%3A0%22%5D&facetNetwork=%5B%22F%22%2C%22S%22%5D&origin=FACETED_SEARCH%3Fpage&page="p, "")
 
 
 
-while p < 10  ;how many pages
+while p < 25  ;how many pages
 {
 
 
