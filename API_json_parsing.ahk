@@ -9,7 +9,7 @@ keywork="megadeth"
 ; JSON PARSING METHOD from API YOUTUBE *****************
 ; example here, by SirRFI (thanks!): https://autohotkey.com/boards/viewtopic.php?f=76&t=38059&p=175017&hilit=parsing+html#p175017
 ;and JSON.ack by cocobelgica (thanks!) https://github.com/cocobelgica/AutoHotkey-JSON/blob/master/JSON.ahk
-YTurl :="https://www.googleapis.com/youtube/v3/search?part=snippet&q=" keyword "&type=video%20&videoCaption=closedCaption&key=AIzaSyCg3TKIXK42J95sMi3-Sr1KiG87H-fvdac"
+YTurl :="https://www.googleapis.com/youtube/v3/search?part=snippet&q=" keyword "&type=video%20&videoCaption=closedCaption&key=***APIKEY***"
 
 
 FileDelete, YourJsonFile.json
